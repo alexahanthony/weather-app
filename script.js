@@ -7,8 +7,8 @@ var citiesArr = [];
 
 //when search button is clicked, load info about city
 function onLoad() {
-  var queryURLCurrent = "http://api.openweathermap.org/data/2.5/weather?" + "q=" + userInput + "&units=imperial" + APIKey;
-  var queryURLFiveDay = "http://api.openweathermap.org/data/2.5/forecast?" + "q=" + userInput + "&units=imperial" + APIKey;
+  var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + userInput + "&units=imperial" + APIKey;
+  var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?" + "q=" + userInput + "&units=imperial" + APIKey;
   // var QueryURLUVIndex = "http://api.openweathermap.org/data/2.5/uvi?" + "&lat={lat}&lon={lon}" + APIKey;
 
 //pull info from current weather API and append to page
@@ -20,7 +20,7 @@ function onLoad() {
     var icon = response.weather[0].icon
     var currentDate = moment().format("MM/DD/YYYY");
     console.log(currentDate);
-    var weatherIcon = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+    var weatherIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
     $(".city-date").html("<h5>" + currentDate + "</h5>");
     $(".current-weather-report").html("<h3>Current Weather Report<br><img src=" + weatherIcon + "></h3>");
     $(".city").html("<h5>City: " + response.name + "</h5>");
@@ -38,7 +38,7 @@ function onLoad() {
     for (let i = 0; i < 5; i++) {
       var myDate = moment(response.list[i * 8].dt_txt).format("MM/DD/YYYY");
       var icon = response.list[i * 8].weather[0].icon;
-      var weatherIcon = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+      var weatherIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
       // var myIcon = $("#").attr('src', weatherIcon)
       var temp = response.list[i * 8].main.temp;
       var humidity = response.list[i * 8].main.humidity;
@@ -85,14 +85,10 @@ function loadCities() {
     onLoad();
   });
 //listens for click on the city buttons that have been added after searched
-  $("#city-list").on("click", function (event) {
+  $("#city-list").on("click","button", function (event) {
     console.log("city");
-    var element = event.target;
-    if (element.matches("button") === true) {
-      userInput = element.textContent;
-      console.log(userInput);
+      $(this);
       onLoad();
-    }
   });
 //loads any cities from the search bar
   $(document).ready(function () {
