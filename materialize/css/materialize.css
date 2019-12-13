@@ -3506,6 +3506,7 @@ table span.badge {
   margin-left: auto;
   left: auto;
   right: auto;
+  height: 30pt;
 }
 
 .row .col.s3 {
@@ -4541,6 +4542,7 @@ h3 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.9466666667rem 0 1.168rem 0;
+  padding-top: 2pt;
 }
 
 h4 {

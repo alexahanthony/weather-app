@@ -24,69 +24,96 @@
             </ul>
         </div>
     </nav>
-
-    <div class="row-1">
-        <div class="col s6" id="city-list">
+    <!-- <div class="contatiner"> -->
+    <div class="row">
+        <div class="col s6" id="my-city-list">
             <h3>Search for a city:</h3>
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="input_text" type="text" data-length="20">
                         <label for="input_text">your city</label>
-                        <a class="waves-effect waves-light btn">search</a>
+                        <a class="waves-effect teal lighten-3 btn">search</a>
+                        <br>
                     </div>
                 </div>
+                <p>
+                    <ul id="city-list"></ul>
+                </p>
             </form>
         </div>
 
         <div class="col s6">
-            <h3>Current Weather Report</h3>
-            <div class="city">City:</div>
-            <div class="temp">Temperature:</div>
-            <div class="humidity">Humidity:</div>
-            <div class="wind">Wind Speed:</div>
-            <div class="uv-index">Feels like:</div>
+            <div class="current-weather-report">
+                <h3>Current Weather Report</h3>
+            </div>
+            <div class="city-date">
+
+            </div>
+            <div class="city">
+                <h5>City:</h5>
+            </div>
+            <div class="temp">
+                <h5>Temperature:</h5>
+            </div>
+            <div class="humidity">
+                <h5>Humidity:</h5>
+            </div>
+            <div class="wind">
+                <h5>Wind Speed:</h5>
+            </div>
+            <div class="uv-index">
+                <h5>UV Index:</h5>
+            </div>
         </div>
-        <br>
-        <div class="row-2">
-            <h3>Five-Day Forecast:</h3>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col s6">
+
+        </div>
+        <div class="col s6">
+            <h3>5-Day Forecast:</h3>
             <!-- Day 1 Box -->
-            <div class="col s1">
-                <div class="card-panel teal">
+            <div class="col s2">
+                <div class="card-panel teal lighten-3">
                     <div id="1"></div>
                 </div>
             </div>
             <!-- Day 2 Box -->
-            <div class="col s1">
-                <div class="card-panel teal">
+            <div class="col s2">
+                <div class="card-panel teal lighten-3">
                     <div id="2"></div>
                 </div>
             </div>
             <!-- Day 3 Box -->
-            <div class="col s1">
-                <div class="card-panel teal">
+            <div class="col s2">
+                <div class="card-panel teal lighten-3">
                     <div id="3"></div>
                 </div>
             </div>
             <!-- Day 4 Box -->
-            <div class="col s1">
-                <div class="card-panel teal">
+            <div class="col s2">
+                <div class="card-panel teal lighten-3">
                     <div id="4"></div>
                 </div>
             </div>
             <!-- Day 5 Box -->
-            <div class="col s1">
-                <div class="card-panel teal">
+            <div class="col s2">
+                <div class="card-panel teal lighten-3">
                     <div id="5"></div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    <!-- </div> -->
 
     <script type="text/javascript" src="./materialize/js/materialize.js"></script>
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
 

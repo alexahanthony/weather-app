@@ -1,5 +1,5 @@
 #city-list {
-    height: 200pt;
+    height: 2000pt;
     background: pink;
 }
 .brand-logo {
@@ -10,4 +10,7 @@
 }
 .waves-effect {
     float: left;
+}
+h3 {
+    color: blueviolet;
 }
